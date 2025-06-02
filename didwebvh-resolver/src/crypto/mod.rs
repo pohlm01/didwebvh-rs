@@ -7,10 +7,10 @@
 //! - Multihash and base58btc encoding
 
 use crate::error::{ResolverError, Result};
-use crate::types::{DIDLogEntry, Parameters};
+use crate::types::{DIDLogEntry};
 use base58::{self, ToBase58};
 use multihash::Multihash;
-use serde_json::{json, Value};
+use serde_json::{Value};
 use serde_json_canonicalizer::to_string as to_canonical_json;
 use sha2::{Digest, Sha256};
 
@@ -214,6 +214,8 @@ pub fn verify_prerotation(update_keys: &[String], prev_next_key_hashes: &[String
 
 #[cfg(test)]
 mod tests {
+    use serde_json::json;
+    use crate::Parameters;
     use super::*;
     use crate::types::Proof;
 

@@ -2,10 +2,10 @@
 //! 
 //! This module provides the main resolver implementation and related functionality.
 
-use crate::error::{ResolverError, ResolutionError, Result, ResolutionResult};
+use crate::error::{ResolverError, ResolutionError, ResolutionResult};
 use crate::http::HttpClient;
-use crate::log::{DIDLog, fetch_and_parse_did_log};
-use crate::types::{DIDResolutionResult, DIDResolutionMetadata, DIDDocumentMetadata, ResolutionOptions};
+use crate::log::{fetch_and_parse_did_log};
+use crate::types::{DIDResolutionResult, DIDResolutionMetadata, ResolutionOptions};
 use crate::url::DIDUrl;
 use serde_json::Value;
 use std::sync::Arc;

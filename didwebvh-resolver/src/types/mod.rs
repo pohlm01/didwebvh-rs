@@ -156,6 +156,10 @@ pub struct DIDDocumentMetadata {
     /// The version ID of the DID Document
     #[serde(rename = "versionId")]
     pub version_id: Option<String>,
+
+    /// The update keys valid for this DID Document
+    #[serde(rename = "updateKeys")]
+    pub update_keys: Option<Vec<String>>,
     
     /// The version ID of the next DID Document
     #[serde(rename = "nextVersionId")]
